@@ -4,11 +4,54 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="script.js"></script>
+    <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>    
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&family=Radio+Canada:wght@300&family=Water+Brush&display=swap" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
-    <div class="container">hello world</div>
+    <div class="sidephoto">
+        <div class="bar">
+            <div class="logo"></div>
+            <h1 class="mysite">MySite</h1>
+        </div>
+    </div>
+    <div class="main-part">
+        <p class="para">This is not a real online service! This is a training site for making forms and other
+            mid-level html code.
+        </p>
+        <p>Sing up now for free!</p>
+        <form action="somewhere" method="post">
+            <fieldset>Let's do this!</fieldset>
+            <label for="fname">First Name</label>
+            <!-- <input type="text" name="fname" id="fname" maxlength="15" pattern="(\D{1,15})" required> -->
+            <!-- dodac :invalid gdy jest liczba i required -->
+            <label for="lname">Last Name</label>
+            <!-- <input type="text" name="lname" id="lname" maxlength="15" pattern="(\D{1,20})" required> -->
+            <!-- dodac :invalid gdy jest liczba i required -->
+            <label for="email">Email</label>
+            <!-- <input type="email" name="email" id="email" required> -->
+            <!-- dodac klase :invalid -->
+            <label for="number">Phone Number</label>
+            <!-- <input type="text" name="number" id="number" pattern="(\d{9})" required> -->
+            <!-- dodac klase :invalid -->
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password" required>
+            <!-- dodac klase :invalid  -->
+            <label for="confpassword">Confirm Password</label>
+            <input type="password" name="confpassword" id="confpassword" required>
+            <!-- dodac klase :invalid 
+            dodac warunek w JS-->
+            <label for="premium">Premium subscription</label>
+            <input type="checkbox" name="premium" id="premium">
+            <label for="newsletter">Newsletter</label>
+            <input type="checkbox" name="newsletter" id="newsletter">
+            <button class="create-button">Create Account</button>
+        </form>
+        <p>Already have account? <a href="facebook.com">Log In!</a></p>
+        <p class="czyok">?</p>
+    </div>
 </body>
 </html>

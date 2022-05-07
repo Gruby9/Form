@@ -1,3 +1,7 @@
+:root {
+  font-family: 'Poppins', sans-serif;
+}
+
 .container {
   height: 200px;
   width: 300px;
