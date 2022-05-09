@@ -1,15 +1,18 @@
-const password = document.querySelector("#password").value
-const confpassword = document.querySelector("#confpassword").value
-const czyok = document.querySelector(".czyok")
-const pass = document.getElementById("password")
+let password = document.querySelector('#password')
+let confpassword = document.querySelector('#confpassword')
+let btn = document.querySelector('.submit-button')
 
-if (password === confpassword) {
-    pass.classList.add("invalid")
-    czyok.innerHTML = "ok"
-} else if (password != confpassword) {
-    czyok.innerHTML = "nie ok"
-} else {
-    czyok.innerHTML = "error"
-}
-
-password.textContent.
+btn.addEventListener('click', function() {
+    let passvalue = password.value
+    let confpassvalue = confpassword.value
+    if (passvalue === confpassvalue) {
+        password.setCustomValidity('')
+        confpassword.setCustomValidity('')
+    } else if (passvalue != confpassvalue) {
+        password.classList.add('invalid')
+        confpassword.classList.add('invalid')
+        confpassword.setCustomValidity('passwords do not match')
+    } else {
+        console.log('error')
+    }
+})
